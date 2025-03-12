@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmaskill Hub for Electronics | Homepage</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body id="body" class="bg-white text-black transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="px-6 md:px-10 lg:px-24 py-5 font-['space_grotesk'] transition-colors duration-300 shadow-sm">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="link">
+                <a href="index.html" class="font-['space_grotesk']">
+                    <img id="logo" src="assets/images/logoo.png" alt="Emmaskill Hub for Electronics"
+                        class="w-16 md:w-20">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul id="nav-links" class="hidden md:flex items-center gap-6 lg:gap-10 font-['space_grotesk']">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop Now</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+
+            <!-- Buttons & Dark Mode Toggle -->
+            <div class="flex items-center gap-3 md:gap-5 font-['space_grotesk']">
+                <!-- Dark Mode Toggle (Always Visible) -->
+                <button id="mode" class="toggle-btn">
+                    <i id="mode-icon" class="fa-solid fa-sun text-2xl"></i>
+                </button>
+
+                <!-- Help & Sign Up (Only Visible on Desktop) -->
+                <button id="help-btn"
+                    class="hidden md:block btn outline outline-black dark:outline-white text-black dark:text-white rounded-sm px-5 py-2 md:px-7 md:py-2.5">Help</button>
+                <button id="signup-btn"
+                    class="hidden md:block btn bg-black text-white rounded-sm px-5 py-2 md:px-7 md:py-2.5 dark:bg-white dark:text-black dark:outline dark:outline-white">Sign
+                    Up</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl font-['space_grotesk']">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Now Styled Sleekly) -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white text-black hidden flex flex-col items-center justify-center space-y-6 text-xl md:hidden transition-all duration-300 transform translate-y-full dark:bg-black dark:text-white font-['space_grotesk']">
+        <button id="close-menu" class="absolute top-5 right-5 text-2xl">
+            <i class="fa-solid fa-times"></i>
+        </button>
+
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="shop.html" class="mobile-link">Shop Now</a>
+        <a href="contact.html" class="mobile-link">Contact Us</a>
+
+        <!-- Mobile Help & Sign Up Buttons -->
+        <button id="mobile-help-btn"
+            class="btn outline outline-black dark:outline-white text-black dark:text-white rounded-sm px-5 py-2">Help</button>
+        <button id="mobile-signup-btn"
+            class="btn bg-black text-white rounded-sm px-5 py-2 dark:bg-white dark:text-black dark:outline dark:outline-white">Sign
+            Up</button>
+    </div>
+
+    <section
+        class="relative w-full h-[90vh] bg-cover bg-center font-['plus_jakarta_sans'] transition-colors duration-300"
+        style="background-image: url('/assets/images/laptop.jpg');">
+
+        <!-- Dark Overlay (Darker in dark mode) -->
+        <div id="overlay" class="absolute inset-0 bg-black/70 dark:bg-black/80 transition-colors duration-300"></div>
+
+        <!-- Content -->
+        <div
+            class="relative container mx-auto flex items-center justify-center md:justify-start text-white h-full px-5">
+            <div class="flex flex-col gap-5 md:gap-7 text-center md:text-left" data-aos="fade-down"
+                data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold capitalize">
+                    Discover the <br> latest gadgets <br> and deals
+                </h1>
+                <p class="text-lg md:text-xl">
+                    Explore our exclusive collection of cutting-edge gadgets, both new <br class="hidden md:block">
+                    and refurbished. Don't miss out on our special offers designed just for you!
+                </p>
+                <div class="flex justify-center md:justify-start gap-5">
+                    <button
+                        class="px-8 py-3 md:px-12 md:py-4 text-lg md:text-2xl font-bold uppercase rounded-sm bg-black text-white transition-all duration-300 dark:bg-white dark:text-black border border-transparent dark:border-black hover:scale-105">
+                        Shop Now
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto p-10 py-[100px] md:py-[100px] font-['manrope']">
+        <h1 class="text-3xl md:text-5xl font-semibold capitalize text-center mb-16 text-black">
+            Discover our extensive collection of <br class="hidden md:block"> cutting-edge gadgets & accessories
+        </h1>
+
+        <!-- Swiper Container -->
+        <div class="swiper mySlideshow relative overflow-visible min-h-[400px]">
+            <div class="swiper-wrapper overflow-visible">
+                <!-- Slide 1 -->
+                <div class="swiper-slide flex justify-center items-center min-h-[420px]">
+                    <div
+                        class="bg-white border border-gray-900 shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow">
+                        <img src="assets/images/laptop.jpg" alt="Gadget 1"
+                            class="w-full h-[400px] object-cover rounded-md border-b border-gray-900 pb-3">
+                        <h2 class="text-lg font-semibold mt-4 text-black tracking-wide">Smart Laptop</h2>
+                        <p class="text-gray-900 leading-relaxed">High-performance laptop with the latest specs.</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide flex justify-center items-center min-h-[420px]">
+                    <div
+                        class="bg-white border border-gray-900 shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow">
+                        <img src="assets/images/laptop.jpg" alt="Gadget 2"
+                            class="w-full h-[400px] object-cover rounded-md border-b border-gray-900 pb-3">
+                        <h2 class="text-lg font-semibold mt-4 text-black tracking-wide">Flagship Smartphone</h2>
+                        <p class="text-gray-900 leading-relaxed">Latest smartphone with AI-powered camera.</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide flex justify-center items-center min-h-[420px]">
+                    <div
+                        class="bg-white border border-gray-900 shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow">
+                        <img src="assets/images/laptop.jpg" alt="Gadget 3"
+                            class="w-full h-[400px] object-cover rounded-md border-b border-gray-900 pb-3">
+                        <h2 class="text-lg font-semibold mt-4 text-black tracking-wide">Noise-Canceling Headphones</h2>
+                        <p class="text-gray-900 leading-relaxed">Experience immersive sound with premium noise
+                            cancellation.</p>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide flex justify-center items-center min-h-[420px]">
+                    <div
+                        class="bg-white border border-gray-900 shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow">
+                        <img src="assets/images/laptop.jpg" alt="Gadget 4"
+                            class="w-full h-[400px] object-cover rounded-md border-b border-gray-900 pb-3">
+                        <h2 class="text-lg font-semibold mt-4 text-black tracking-wide">Smartwatch</h2>
+                        <p class="text-gray-900 leading-relaxed">Track your health and stay connected on the go.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-black font-['big_shoulders']">
+        <div class="container mx-auto px-5 lg:px-20">
+            <!-- Section Heading -->
+            <div class="text-center mb-12">
+                <h5 class="text-gray-300 text-lg uppercase tracking-wide">Gadgets</h5>
+                <h1 class="text-white text-4xl md:text-6xl font-bold my-3">Products</h1>
+                <p class="text-gray-400 text-lg">Discover the latest in tech & innovation</p>
+            </div>
+
+            <!-- Top Section -->
+            <div class="flex flex-col md:flex-row items-center justify-between mb-10 gap-5">
+                <p class="text-gray-300 text-center md:text-left text-base md:text-lg">
+                    Explore top-tier gadgets with cutting-edge technology.
+                </p>
+                <a href="all.html" class="border border-white px-6 py-3 text-white transition-all duration-300 
+                    hover:bg-white hover:text-black rounded-md">
+                    View All
+                </a>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Product Card -->
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="assets/images/laptop.jpg" alt="Smart Watch" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Smart Watch</h3>
+                        <h5 class="text-green-400 font-medium">New Arrival</h5>
+                        <h1 class="text-2xl font-bold mt-2">$199</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="assets/images/laptop.jpg" alt="Laptop" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Laptop</h3>
+                        <h5 class="text-green-400 font-medium">High Performance</h5>
+                        <h1 class="text-2xl font-bold mt-2">$999</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="assets/images/laptop.jpg" alt="Wireless Headphones" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Wireless Headphones</h3>
+                        <h5 class="text-green-400 font-medium">Noise Cancelling</h5>
+                        <h1 class="text-2xl font-bold mt-2">$149</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="assets/images/laptop.jpg" alt="Gaming Console" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Gaming Console</h3>
+                        <h5 class="text-green-400 font-medium">Next-Gen Experience</h5>
+                        <h1 class="text-2xl font-bold mt-2">$499</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="assets/images/laptop.jpg" alt="Smartphone" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Smartphone</h3>
+                        <h5 class="text-green-400 font-medium">Flagship Model</h5>
+                        <h1 class="text-2xl font-bold mt-2">$799</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="assets/images/laptop.jpg" alt="Tablet" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Tablet</h3>
+                        <h5 class="text-green-400 font-medium">Portable & Powerful</h5>
+                        <h1 class="text-2xl font-bold mt-2">$599</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section (White) -->
+    <section class="bg-white text-black py-16 px-5 text-center font-['inter_tight']">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold">Stay Updated with Our Newsletter</h2>
+            <p class="mt-3">Subscribe now to receive the latest updates and exclusive promotions on our gadgets.</p>
+            <form class="mt-6 flex flex-col md:flex-row gap-4 items-center justify-center">
+                <input type="email" placeholder="Enter your email"
+                    class="px-5 py-3 w-full md:w-2/3 rounded-md border border-gray-600 text-black bg-white focus:outline-none focus:ring-2 focus:ring-gray-500">
+                <button type="submit"
+                    class="px-6 py-3 text-black bg-gray-200 font-semibold rounded-md hover:bg-gray-300 transition-all duration-300">
+                    Sign Up
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Black) -->
+    <section class="bg-black text-white py-16 px-5 font-['big_shoulders']">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold">FAQs</h2>
+            <p class="text-gray-400 mt-3">Find answers to your most common questions about our services and policies.
+            </p>
+            <div class="mt-10 space-y-4">
+                <div class="border border-white rounded-lg overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-gray-800 hover:bg-gray-700 transition-all duration-300">
+                        What is your return policy?
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="faq-content hidden p-6 text-gray-300">
+                        We accept returns within 30 days of purchase. Items must be in original condition.
+                    </div>
+                </div>
+                <div class="border border-white rounded-lg overflow-hidden">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center px-6 py-4 text-left font-semibold bg-gray-800 hover:bg-gray-700 transition-all duration-300">
+                        How is shipping handled?
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="faq-content hidden p-6 text-gray-300">
+                        Orders are processed within 1-2 business days. You will receive a tracking number once your
+                        order ships.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (White) -->
+    <section class="bg-white text-black py-16 px-5 font-['manrope']">
+        <div class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10">
+            <div>
+                <p class="text-gray-600 uppercase">Connect</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Contact Us</h2>
+                <p class="text-gray-600 mt-2">We're here to help you with anything!</p>
+                <div class="mt-6 space-y-6">
+                    <div>
+                        <p class="text-gray-600 uppercase font-semibold">Email</p>
+                        <a href="mailto:hello@example.com"
+                            class="text-black font-medium hover:underline">hello@example.com</a>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 uppercase font-semibold">Phone</p>
+                        <a href="tel:+16550000000" class="text-black font-medium hover:underline">+1 655 000-0000</a>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 uppercase font-semibold">Office</p>
+                        <p class="text-black font-medium">123 Sample St, Sydney NSW 2000 AU</p>
+                        <a href="https://maps.google.com" class="text-gray-500 hover:text-black hover:underline">Get
+                            Directions →</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <iframe class="w-full h-80 rounded-lg border-2 border-gray-300"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.5982292356252!2d4.8457005!3d7.936960699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1037ef0961591691%3A0x309d914d1e6f7d62!2sEMMASKILL%20HUB%20FOR%20ELECTRONICS!5e0!3m2!1sen!2sng!4v1741743518083!5m2!1sen!2sng"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Black) -->
+    <footer class="bg-black text-white py-10 font-['inter_tight']">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400">&copy; 2025 YourBrand. All rights reserved.</p>
+            <nav class="flex gap-6 text-gray-400 text-sm">
+                <a href="#" class="hover:text-white">Shop Now</a>
+                <a href="#" class="hover:text-white">About Us</a>
+                <a href="#" class="hover:text-white">Contact Us</a>
+                <a href="#" class="hover:text-white">FAQ</a>
+                <a href="#" class="hover:text-white">Blog</a>
+            </nav>
+            <div class="flex gap-4">
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for FAQ -->
+    <script>
+        document.querySelectorAll(".faq-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                let content = this.nextElementSibling;
+                let icon = this.querySelector("span");
+
+                document.querySelectorAll(".faq-content").forEach(item => {
+                    if (item !== content) {
+                        item.classList.add("hidden");
+                        item.previousElementSibling.querySelector("span").textContent = "+";
+                    }
+                });
+
+                content.classList.toggle("hidden");
+                icon.textContent = content.classList.contains("hidden") ? "+" : "-";
+            });
+        });
+    </script>
+
+
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modeBtn = document.getElementById("mode");
+            const modeIcon = document.getElementById("mode-icon");
+            const body = document.getElementById("body");
+            const logo = document.getElementById("logo");
+            const navLinks = document.querySelectorAll(".nav-link");
+            const mobileLinks = document.querySelectorAll(".mobile-link");
+            const buttons = document.querySelectorAll(".btn");
+
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeMenuBtn = document.getElementById("close-menu");
+
+            const lightLogo = "assets/images/logoo.png";
+            const darkLogo = "assets/images/whites.png";
+
+            function applyTheme(theme) {
+                if (theme === "dark") {
+                    body.classList.add("bg-black", "text-white");
+                    body.classList.remove("bg-white", "text-black");
+                    modeIcon.classList.replace("fa-sun", "fa-moon");
+                    logo.src = darkLogo;
+
+                    // Update navigation & mobile menu links
+                    navLinks.forEach(link => link.classList.add("text-white"));
+                    mobileLinks.forEach(link => link.classList.add("text-white"));
+
+                    // Update button styles
+                    buttons.forEach(button => {
+                        button.classList.add("dark:bg-white", "dark:text-black", "dark:outline", "dark:outline-white");
+                        button.classList.remove("dark:bg-black", "dark:text-white");
+                    });
+
+                    // Mobile menu background
+                    mobileMenu.classList.add("dark:bg-black", "dark:text-white");
+
+                } else {
+                    body.classList.add("bg-white", "text-black");
+                    body.classList.remove("bg-black", "text-white");
+                    modeIcon.classList.replace("fa-moon", "fa-sun");
+                    logo.src = lightLogo;
+
+                    // Reset navigation & mobile menu links
+                    navLinks.forEach(link => link.classList.remove("text-white"));
+                    mobileLinks.forEach(link => link.classList.remove("text-white"));
+
+                    // Reset button styles
+                    buttons.forEach(button => {
+                        button.classList.remove("dark:bg-white", "dark:text-black", "dark:outline", "dark:outline-white");
+                        button.classList.add("dark:bg-black", "dark:text-white");
+                    });
+
+                    // Reset mobile menu background
+                    mobileMenu.classList.remove("dark:bg-black", "dark:text-white");
+                }
+            }
+
+            // Get saved theme or default to light
+            const savedTheme = localStorage.getItem("theme") || "light";
+            applyTheme(savedTheme);
+
+            // Toggle Dark Mode
+            modeBtn.addEventListener("click", () => {
+                const newTheme = body.classList.contains("bg-black") ? "light" : "dark";
+                localStorage.setItem("theme", newTheme);
+                applyTheme(newTheme);
+            });
+
+            // **Fixed Mobile Menu Toggle**
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden"); // Show/hide menu
+                mobileMenu.classList.toggle("translate-y-full"); // Animate menu slide-in
+            });
+
+            closeMenuBtn.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden"); // Hide menu
+                mobileMenu.classList.add("translate-y-full"); // Reset animation
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".mySlideshow", {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: { delay: 3000 },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    1024: { slidesPerView: 3 },
+                    768: { slidesPerView: 2 },
+                    480: { slidesPerView: 1 },
+                },
+                on: {
+                    init: function () {
+                        document.querySelector('.swiper-wrapper').style.overflow = 'visible';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
