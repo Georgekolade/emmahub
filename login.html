@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Emmaskill Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen font-['Space_Grotesk']">
+
+    <!-- Login Form Card -->
+    <div class="bg-gray-800/50 backdrop-blur-lg p-8 rounded-xl shadow-lg w-96 text-center border border-gray-700">
+        <h1 class="text-3xl font-semibold mb-6">Welcome Back</h1>
+
+        <!-- Social Login -->
+        <div class="flex justify-center gap-3 mb-4">
+            <button class="p-3 bg-gray-700 hover:bg-gray-600 transition rounded-lg flex items-center justify-center w-12 h-12">
+                <i class="fab fa-google text-white text-lg"></i>
+            </button>
+            <button class="p-3 bg-gray-700 hover:bg-gray-600 transition rounded-lg flex items-center justify-center w-12 h-12">
+                <i class="fab fa-facebook text-white text-lg"></i>
+            </button>
+            <button class="p-3 bg-gray-700 hover:bg-gray-600 transition rounded-lg flex items-center justify-center w-12 h-12">
+                <i class="fab fa-x-twitter text-white text-lg"></i>
+            </button>
+        </div>
+
+        <p class="text-gray-400 mb-4">or use your email to login</p>
+
+        <!-- Login Form -->
+        <form class="space-y-4">
+            <input type="email" placeholder="Email"
+                class="w-full p-3 rounded-lg bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-500 transition">
+            <input type="password" placeholder="Password"
+                class="w-full p-3 rounded-lg bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-500 transition">
+            
+            <div class="flex justify-between text-sm text-gray-400">
+                <label class="flex items-center">
+                    <input type="checkbox" class="accent-blue-500 mr-2">
+                    Remember me
+                </label>
+                <a href="#" class="text-blue-400 hover:underline">Forgot Password?</a>
+            </div>
+
+            <button type="submit"
+                class="w-full py-3 rounded-lg bg-blue-500 hover:bg-blue-600 transition font-semibold text-lg shadow-md">
+                Sign In
+            </button>
+        </form>
+
+        <p class="mt-4 text-gray-400 text-sm">
+            Don't have an account? <a href="#" class="text-blue-400 hover:underline">Sign up</a>
+        </p>
+    </div>
+
+</body>
+
+</html>
