@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmaskill Hub for Electronics | Products</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body id="body" class="bg-white text-black transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="px-6 md:px-10 lg:px-24 py-5 font-['space_grotesk'] transition-colors duration-300 shadow-sm">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="link">
+                <a href="index.html" class="font-['space_grotesk']">
+                    <img id="logo" src="assets/images/logoo.png" alt="Emmaskill Hub for Electronics"
+                        class="w-16 md:w-20">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul id="nav-links" class="hidden md:flex items-center gap-6 lg:gap-10 font-['space_grotesk']">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop Now</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+
+            <!-- Buttons & Dark Mode Toggle -->
+            <div class="flex items-center gap-3 md:gap-5 font-['space_grotesk']">
+                <!-- Dark Mode Toggle (Always Visible) -->
+                <button id="mode" class="toggle-btn">
+                    <i id="mode-icon" class="fa-solid fa-sun text-2xl"></i>
+                </button>
+
+                <!-- Help & Sign Up (Only Visible on Desktop) -->
+                <button id="help-btn"
+                    class="hidden md:block btn outline outline-black dark:outline-white text-black dark:text-white rounded-sm px-5 py-2 md:px-7 md:py-2.5">Help</button>
+                <button id="signup-btn"
+                    class="hidden md:block btn bg-black text-white rounded-sm px-5 py-2 md:px-7 md:py-2.5 dark:bg-white dark:text-black dark:outline dark:outline-white">Sign
+                    Up</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl font-['space_grotesk']">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Updated for High Z-Index) -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white text-black hidden flex flex-col items-center justify-center space-y-6 text-xl md:hidden transition-all duration-300 transform translate-y-full dark:bg-black dark:text-white font-['space_grotesk'] z-[9999]">
+        <button id="close-menu" class="absolute top-5 right-5 text-2xl">
+            <i class="fa-solid fa-times"></i>
+        </button>
+
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="shop.html" class="mobile-link">Shop Now</a>
+        <a href="contact.html" class="mobile-link">Contact Us</a>
+
+        <!-- Mobile Help & Sign Up Buttons -->
+        <button id="mobile-help-btn"
+            class="btn outline outline-black dark:outline-white text-black dark:text-white rounded-sm px-5 py-2">Help</button>
+        <button id="mobile-signup-btn"
+            class="btn bg-black text-white rounded-sm px-5 py-2 dark:bg-white dark:text-black dark:outline dark:outline-white">Sign
+            Up</button>
+    </div>
+
+    <section class="py-20 bg-black text-white font-['big_shoulders']">
+        <div class="container mx-auto px-5 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Product Image -->
+            <div class="rounded-xl overflow-hidden shadow-lg">
+                <img src="assets/images/laptop.jpg" alt="Product Image" class="w-full h-auto object-cover">
+            </div>
+
+            <!-- Product Details -->
+            <div class="flex flex-col justify-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-3">Smart Watch</h1>
+                <h5 class="text-green-400 text-xl font-medium">New Arrival</h5>
+                <p class="text-gray-400 text-lg my-4">Experience the future on your wrist with cutting-edge tech and
+                    premium design.</p>
+
+                <!-- Price & CTA -->
+                <div class="flex items-center gap-5 mt-4">
+                    <h1 class="text-3xl font-bold">$199</h1>
+                    <button class="bg-green-500 text-black px-6 py-3 rounded-md hover:bg-green-600 transition">Add to
+                        Cart</button>
+                </div>
+
+                <!-- Specifications -->
+                <div class="mt-6">
+                    <h2 class="text-2xl font-semibold mb-3">Specifications</h2>
+                    <ul class="list-disc list-inside text-gray-300 text-lg">
+                        <li>High-Resolution OLED Display</li>
+                        <li>Heart Rate & Activity Tracker</li>
+                        <li>Water Resistant up to 50m</li>
+                        <li>Compatible with iOS & Android</li>
+                        <li>Long Battery Life (Up to 7 Days)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="container mx-auto px-5 lg:px-20 mt-16">
+            <h2 class="text-4xl font-extrabold text-white text-center mb-12 tracking-wide">What Our Customers Say</h2>
+
+            <!-- Swiper Container -->
+            <div class="swiper reviewSlider relative overflow-visible min-h-[280px] max-w-5xl mx-auto">
+                <div class="swiper-wrapper">
+                    <!-- Review 1 -->
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div
+                            class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-700 max-w-lg text-center transition-all transform">
+                            <p class="text-gray-300 text-xl leading-relaxed font-light italic">“This smartwatch exceeded
+                                my expectations! The battery life is fantastic, and the design is sleek.”</p>
+                            <p class="text-green-400 mt-4 font-semibold text-lg">- Alex Johnson</p>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div
+                            class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-700 max-w-lg text-center transition-all transform">
+                            <p class="text-gray-300 text-xl leading-relaxed font-light italic">“Great quality! The
+                                materials feel premium, and it's super easy to use.”</p>
+                            <p class="text-green-400 mt-4 font-semibold text-lg">- Sarah Williams</p>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div
+                            class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-700 max-w-lg text-center transition-all transform">
+                            <p class="text-gray-300 text-xl leading-relaxed font-light italic">“Amazing smartwatch! The
+                                fitness tracking is spot on, and I love the display.”</p>
+                            <p class="text-green-400 mt-4 font-semibold text-lg">- Michael Brown</p>
+                        </div>
+                    </div>
+                    <!-- Review 4 -->
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div
+                            class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-700 max-w-lg text-center transition-all transform">
+                            <p class="text-gray-300 text-xl leading-relaxed font-light italic">“Super fast delivery and
+                                excellent customer service. Highly recommend!”</p>
+                            <p class="text-green-400 mt-4 font-semibold text-lg">- Emily Davis</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+
+
+            <!-- User Review Form -->
+            <div class="bg-gray-900 p-6 rounded-lg shadow-md mb-12 mt-10">
+                <h2 class="text-2xl font-bold mb-4">Leave a Review</h2>
+                <form id="reviewForm" class="space-y-4">
+                    <input type="text" id="reviewerName" placeholder="Your Name"
+                        class="w-full p-3 bg-gray-800 text-white rounded-md outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+
+                    <textarea id="reviewText" placeholder="Write your review..."
+                        class="w-full p-3 bg-gray-800 text-white rounded-md outline-none focus:ring-2 focus:ring-blue-500"
+                        required></textarea>
+
+                    <div class="flex items-center space-x-3">
+                        <label class="text-lg">Rating:</label>
+                        <select id="reviewRating" class="p-2 bg-gray-800 text-white rounded-md">
+                            <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                            <option value="4">⭐⭐⭐⭐ - Very Good</option>
+                            <option value="3">⭐⭐⭐ - Good</option>
+                            <option value="2">⭐⭐ - Fair</option>
+                            <option value="1">⭐ - Poor</option>
+                        </select>
+                    </div>
+
+                    <button type="submit"
+                        class="bg-blue-500 px-5 py-2 rounded-md font-bold text-white hover:bg-blue-600 transition">Submit
+                        Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Black) -->
+    <footer class="bg-black text-white py-10 font-['inter_tight']">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400">&copy; 2025 <a href="index copy.html">Emmaskill Hub for Electronics</a>. All rights
+                reserved.</p>
+            <nav class="flex gap-6 text-gray-400 text-sm my-3">
+                <a href="#" class="hover:text-white">Shop Now</a>
+                <a href="#" class="hover:text-white">About Us</a>
+                <a href="#" class="hover:text-white">Contact Us</a>
+                <a href="#" class="hover:text-white">FAQ</a>
+                <a href="#" class="hover:text-white">Blog</a>
+            </nav>
+            <div class="flex gap-4">
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modeBtn = document.getElementById("mode");
+            const modeIcon = document.getElementById("mode-icon");
+            const body = document.getElementById("body");
+            const logo = document.getElementById("logo");
+            const navLinks = document.querySelectorAll(".nav-link");
+            const mobileLinks = document.querySelectorAll(".mobile-link");
+            const buttons = document.querySelectorAll(".btn");
+            const sectionHeading = document.getElementById("section-heading"); // Target heading
+
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeMenuBtn = document.getElementById("close-menu");
+
+            const lightLogo = "assets/images/logoo.png";
+            const darkLogo = "assets/images/whites.png";
+
+            function applyTheme(theme) {
+                if (theme === "dark") {
+                    body.style.backgroundColor = "black";
+                    body.style.color = "white";
+                    modeIcon.classList.replace("fa-sun", "fa-moon");
+                    logo.src = darkLogo;
+
+                    // Update navigation & mobile menu links
+                    navLinks.forEach(link => link.style.color = "white");
+                    mobileLinks.forEach(link => link.style.color = "white");
+
+                    // Update button styles
+                    buttons.forEach(button => {
+                        button.style.backgroundColor = "white";
+                        button.style.color = "black";
+                        button.style.border = "1px solid white";
+                    });
+
+                    // Mobile menu background
+                    mobileMenu.style.backgroundColor = "black";
+                    mobileMenu.style.color = "white";
+
+                    // ✅ Fix the Section Heading
+                    if (sectionHeading) {
+                        sectionHeading.style.color = "white"; // Set white in dark mode
+                    }
+
+                } else {
+                    body.style.backgroundColor = "white";
+                    body.style.color = "black";
+                    modeIcon.classList.replace("fa-moon", "fa-sun");
+                    logo.src = lightLogo;
+
+                    // Reset navigation & mobile menu links
+                    navLinks.forEach(link => link.style.color = "black");
+                    mobileLinks.forEach(link => link.style.color = "black");
+
+                    // Reset button styles
+                    buttons.forEach(button => {
+                        button.style.backgroundColor = "black";
+                        button.style.color = "white";
+                        button.style.border = "1px solid black";
+                    });
+
+                    // Reset mobile menu background
+                    mobileMenu.style.backgroundColor = "white";
+                    mobileMenu.style.color = "black";
+
+                    // ✅ Fix the Section Heading
+                    if (sectionHeading) {
+                        sectionHeading.style.color = "black"; // Set black in light mode
+                    }
+                }
+            }
+
+            // Get saved theme or default to light
+            const savedTheme = localStorage.getItem("theme") || "light";
+            applyTheme(savedTheme);
+
+            // Toggle Dark Mode
+            modeBtn.addEventListener("click", () => {
+                const newTheme = body.style.backgroundColor === "black" ? "light" : "dark";
+                localStorage.setItem("theme", newTheme);
+                applyTheme(newTheme);
+            });
+
+            // **Fixed Mobile Menu Toggle**
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden"); // Show/hide menu
+                mobileMenu.classList.toggle("translate-y-full"); // Animate menu slide-in
+            });
+
+            closeMenuBtn.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden"); // Hide menu
+                mobileMenu.classList.add("translate-y-full"); // Reset animation
+            });
+        });
+
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".reviewSlider", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: { delay: 3000 },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

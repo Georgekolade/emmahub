@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <section class="py-20 bg-black font-['big_shoulders']">
+        <div class="container mx-auto px-5 lg:px-20" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+            <!-- Section Heading -->
+            <div class="text-center mb-12">
+                <h5 class="text-gray-300 text-lg uppercase tracking-wide">Gadgets</h5>
+                <h1 class="text-white text-4xl md:text-6xl font-bold my-3">Products</h1>
+                <p class="text-gray-400 text-lg">Discover the latest in tech & innovation</p>
+            </div>
+
+            <!-- Top Section -->
+            <div class="flex flex-col md:flex-row items-center justify-between mb-10 gap-5">
+                <p class="text-gray-300 text-center md:text-left text-base md:text-lg">
+                    Explore top-tier gadgets with cutting-edge technology.
+                </p>
+                <!-- <a href="#" class="border border-white px-6 py-3 text-white transition-all duration-300 
+                    hover:bg-white hover:text-black rounded-md">
+                    View All
+                </a> -->
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Product Card -->
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="{% static 'images/laptop.jpg' %}" alt="Smart Watch" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Smart Watch</h3>
+                        <h5 class="text-green-400 font-medium">New Arrival</h5>
+                        <h1 class="text-2xl font-bold mt-2">$199</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="{% static 'images/laptop.jpg' %}" alt="Laptop" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Laptop</h3>
+                        <h5 class="text-green-400 font-medium">High Performance</h5>
+                        <h1 class="text-2xl font-bold mt-2">$999</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="{% static 'images/laptop.jpg' %}" alt="Wireless Headphones" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Wireless Headphones</h3>
+                        <h5 class="text-green-400 font-medium">Noise Cancelling</h5>
+                        <h1 class="text-2xl font-bold mt-2">$149</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="{% static 'images/laptop.jpg' %}" alt="Gaming Console" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Gaming Console</h3>
+                        <h5 class="text-green-400 font-medium">Next-Gen Experience</h5>
+                        <h1 class="text-2xl font-bold mt-2">$499</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="{% static 'images/laptop.jpg' %}" alt="Smartphone" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Smartphone</h3>
+                        <h5 class="text-green-400 font-medium">Flagship Model</h5>
+                        <h1 class="text-2xl font-bold mt-2">$799</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105">
+                    <img src="{% static 'images/laptop.jpg' %}" alt="Tablet" class="h-64 w-full object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold">Tablet</h3>
+                        <h5 class="text-green-400 font-medium">Portable & Powerful</h5>
+                        <h1 class="text-2xl font-bold mt-2">$599</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   {% endblock %}
